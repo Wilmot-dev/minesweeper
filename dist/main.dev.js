@@ -1,6 +1,9 @@
 "use strict";
 
-var generator = function generator(numRows, numCols, numMines) {
+var generator = function generator() {
+  var numRows = parseInt(document.querySelector('#rows').value);
+  var numCols = parseInt(document.querySelector('#cols').value);
+  var numMines = parseInt(document.querySelector('#mines').value);
   var board = new Array(numRows);
 
   for (var rows = 0; rows < numRows; rows++) {
@@ -66,6 +69,4 @@ var generator = function generator(numRows, numCols, numMines) {
   }
 
   console.log(board);
-};
-
-generator(15, 15, 30);
+}; // generator(15, 15, 30);

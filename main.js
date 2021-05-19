@@ -1,4 +1,7 @@
-const generator = (numRows, numCols, numMines) => {
+const generator = () => {
+  const numRows = parseInt(document.querySelector('#rows').value);
+  const numCols = parseInt(document.querySelector('#cols').value);
+  const numMines = parseInt(document.querySelector('#mines').value);
   let board = new Array(numRows);
   for (let rows = 0; rows < numRows; rows++) {
     board[rows] = new Array(numCols);
@@ -52,4 +55,4 @@ const generator = (numRows, numCols, numMines) => {
   console.log(board);
 };
 
-generator(15, 15, 30);
+// generator(15, 15, 30);
